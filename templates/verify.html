@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DejaView | Verify News</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+</head>
+
+<body class="bg-white dark:bg-gray-900">
+    <nav class="mb-8 bg-blue-100 light:shadow dark:bg-gray-800">
+        <div class="px-8 mx-auto max-w-7xl">
+            <div class="flex flex-col items-center justify-between h-16 md:flex-row">
+                <div class="flex items-center justify-between w-full h-16 py-0">
+                    <div class="flex cursor-default">
+                        <img class="w-8 h-8 mr-2 rounded-sm" src="/static/logo.png" alt="DejaView" />
+                        <p class="text-2xl font-light dark:text-white">DejaView</p>
+                    </div>
+                    <div class="block">
+                        <div class="flex items-baseline h-16 space-x-4">
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/">
+                                Home
+                            </a>
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/news">
+                                News
+                            </a>
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 dark:text-white hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/verify">
+                                Fake News Detector
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- add a text area box -->
+    <div class="flex flex-col items-center h-full mt-8">
+        <!-- Input the news article to verify -->
+        <div class="w-full md:w-2/3 lg:w-1/2">
+            <form class="flex flex-col px-8 pt-6 pb-8 my-2 mb-4 bg-white border-2 rounded light:shadow-md dark:bg-gray-800"
+            method="post" action="{{ url_for('verify') }}">
+                <div class="mb-6 -mx-3 md:flex">
+                    <!-- title  -->
+                    <div class="px-3 md:w-full">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300"
+                            for="grid-password">
+                            Title
+                        </label>
+                        <input name="title" id="title" type="text"
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 border border-gray-200 rounded appearance-none focus:outline-blue-500 focus:bg-white"
+                            placeholder="News here...">
+                    </div>
+                </div>
+                <div class="mb-6 -mx-3 md:flex">
+                    <!-- Author  -->
+                    <div class="px-3 md:w-full">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300"
+                            for="grid-password">
+                            Author
+                        </label>
+                        <input name="author" id="author" type="text"
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 border border-gray-200 rounded appearance-none focus:outline-blue-500 focus:bg-white"
+                            placeholder="News here...">
+                    </div>
+                </div>
+                <div class="mb-6 -mx-3 md:flex">
+                    <!-- Text  -->
+                    <div class="px-3 md:w-full">
+                        <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase dark:text-gray-300"
+                            for="grid-password">
+                            Text
+                        </label>
+                        <textarea name="text" id="text"
+                            class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 border border-gray-200 rounded appearance-none h-36 focus:outline-blue-500 focus:bg-white"
+                            placeholder="News here..."></textarea>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button
+                        class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:shadow-outline"
+                        type="submit">
+                        Verify
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- output result here -->
+        {% if show_results %}
+        <div class="w-full mt-6 md:w-2/3 lg:w-1/2">
+            <div class="flex flex-col px-8 pt-6 pb-8 my-2 mb-4 text-white border-2 rounded light:shadow-md bg-{{ color }}-500">
+                <div class="px-3 md:w-full">
+                    <p class="text-2xl font-bold">
+                        The news is {{ result }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

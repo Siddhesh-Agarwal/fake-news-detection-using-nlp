@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DejaView</title>
+    <link rel="shortcut icon" href="./static/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap');
+
+    * {
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+    }
+</style>
+
+<body class="bg-white dark:bg-gray-900">
+    <nav class="mb-8 bg-blue-100 light:shadow dark:bg-gray-800">
+        <div class="px-8 mx-auto max-w-7xl">
+            <div class="flex flex-col items-center justify-between h-16 md:flex-row">
+                <div class="flex items-center justify-between w-full h-16 py-0">
+                    <div class="flex cursor-default">
+                        <img class="w-8 h-8 mr-2 rounded-sm" src="/static/logo.png" alt="DejaView" />
+                        <p class="text-2xl font-light dark:text-white">DejaView</p>
+                    </div>
+                    <div class="block">
+                        <div class="flex items-baseline h-16 space-x-4">
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 dark:text-white hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/">
+                                Home
+                            </a>
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/news">
+                                News
+                            </a>
+                            <a class="px-3 py-5 text-sm font-medium text-gray-500 hover:text-gray-800 dark:hover:text-white hover:bg-blue-300 dark:hover:bg-blue-700"
+                                href="/verify">
+                                Fake News Detector
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <blockquote class="mt-6 text-2xl italic font-semibold text-center text-slate-900 dark:text-slate-100">
+        We believe in the power of
+        <span
+            class="relative inline-block mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-red-500">
+            <span class="relative text-white"> Truth </span>
+        </span> above everything else.
+    </blockquote>
+
+
+    <section class="text-gray-600 dark:text-gray-400 body-font">
+        <div class="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
+            <div class="w-5/6 mb-10 lg:max-w-lg lg:w-full md:w-1/2 md:mb-0">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" class="w-full mx-auto md:w-1/2" viewBox="0 0 32 32"
+                    enable-background="new 0 0 32 32" xml:space="preserve">
+                    <g>
+                        <path d="M1.5,32h14c0.276,0,0.5-0.224,0.5-0.5S15.776,31,15.5,31h-14C1.224,31,1,30.776,1,30.5v-29
+	                                C1,1.224,1.224,1,1.5,1h21C22.776,1,23,1.224,23,1.5v5C23,6.776,23.224,7,23.5,7S24,6.776,24,6.5v-5C24,0.673,23.327,0,22.5,0h-21
+	                                C0.673,0,0,0.673,0,1.5v29C0,31.327,0.673,32,1.5,32z" />
+                        <path d="M18,10.5v20c0,0.827,0.673,1.5,1.5,1.5h11c0.827,0,1.5-0.673,1.5-1.5v-20C32,9.673,31.327,9,30.5,9h-11
+		                            C18.673,9,18,9.673,18,10.5z M31,10.5v20c0,0.276-0.224,0.5-0.5,0.5h-11c-0.276,0-0.5-0.224-0.5-0.5v-20c0-0.276,0.224-0.5,0.5-0.5
+		                            h11C30.776,10,31,10.224,31,10.5z" />
+                        <circle cx="12" cy="28" r="1" />
+                        <circle cx="25" cy="28" r="1" />
+                    </g>
+                </svg>
+            </div>
+            <div
+                class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left">
+                <h1 class="mb-4 text-3xl font-medium text-gray-900 dark:text-gray-100 title-font sm:text-4xl">
+                    Get the DejaView mobile app today!
+                </h1>
+                <p class="mb-8 leading-relaxed">
+                    We find and deliver the most relevant news articles for you. We also provide a fake news detector to
+                    help you determine if an article is fake or not because we know how important it is to be right.
+                </p>
+                <div class="flex items-end justify-center w-full md:justify-start">
+                    <div class="relative w-2/4 mr-4 lg:w-full xl:w-1/2">
+                        <label for="hero-field" class="text-sm leading-7 text-gray-600 dark:text-gray-500">
+                            Subscribe to our newsletter
+                        </label>
+                        <input type="email" id="hero-field" name="hero-field"
+                            class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none dark:text-gray-300 dark:bg-white focus:ring-2 focus:ring-blue-200 focus:bg-transparent focus:border-blue-500">
+                    </div>
+                    <a href="#"
+                        class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-blue-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-blue-600 group-hover:h-full"></span>
+                        <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+                            <svg class="w-5 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </span>
+                        <span
+                            class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                            <svg class="w-5 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </span>
+                        <span
+                            class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Subscribe</span>
+                    </a>
+                </div>
+                <p class="w-full mt-2 mb-8 text-sm text-gray-500">No spam. No data selling.</p>
+                <div class="flex lg:flex-row md:flex-col">
+                    <button
+                        class="inline-flex items-center px-5 py-3 bg-gray-100 rounded-lg hover:bg-gray-200 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6"
+                            viewBox="0 0 512 512">
+                            <path
+                                d="M99.617 8.057a50.191 50.191 0 00-38.815-6.713l230.932 230.933 74.846-74.846L99.617 8.057zM32.139 20.116c-6.441 8.563-10.148 19.077-10.148 30.199v411.358c0 11.123 3.708 21.636 10.148 30.199l235.877-235.877L32.139 20.116zM464.261 212.087l-67.266-37.637-81.544 81.544 81.548 81.548 67.273-37.64c16.117-9.03 25.738-25.442 25.738-43.908s-9.621-34.877-25.749-43.907zM291.733 279.711L60.815 510.629c3.786.891 7.639 1.371 11.492 1.371a50.275 50.275 0 0027.31-8.07l266.965-149.372-74.849-74.847z">
+                            </path>
+                        </svg>
+                        <span class="flex flex-col items-start ml-4 leading-none">
+                            <span class="mb-1 text-xs text-gray-600">GET IT ON</span>
+                            <span class="font-medium title-font">Google Play</span>
+                        </span>
+                    </button>
+                    <button
+                        class="inline-flex items-center px-5 py-3 mt-0 ml-4 bg-gray-100 rounded-lg lg:ml-4 md:ml-0 md:mt-4 lg:mt-0 hover:bg-gray-200 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6"
+                            viewBox="0 0 305 305">
+                            <path
+                                d="M40.74 112.12c-25.79 44.74-9.4 112.65 19.12 153.82C74.09 286.52 88.5 305 108.24 305c.37 0 .74 0 1.13-.02 9.27-.37 15.97-3.23 22.45-5.99 7.27-3.1 14.8-6.3 26.6-6.3 11.22 0 18.39 3.1 25.31 6.1 6.83 2.95 13.87 6 24.26 5.81 22.23-.41 35.88-20.35 47.92-37.94a168.18 168.18 0 0021-43l.09-.28a2.5 2.5 0 00-1.33-3.06l-.18-.08c-3.92-1.6-38.26-16.84-38.62-58.36-.34-33.74 25.76-51.6 31-54.84l.24-.15a2.5 2.5 0 00.7-3.51c-18-26.37-45.62-30.34-56.73-30.82a50.04 50.04 0 00-4.95-.24c-13.06 0-25.56 4.93-35.61 8.9-6.94 2.73-12.93 5.09-17.06 5.09-4.64 0-10.67-2.4-17.65-5.16-9.33-3.7-19.9-7.9-31.1-7.9l-.79.01c-26.03.38-50.62 15.27-64.18 38.86z">
+                            </path>
+                            <path
+                                d="M212.1 0c-15.76.64-34.67 10.35-45.97 23.58-9.6 11.13-19 29.68-16.52 48.38a2.5 2.5 0 002.29 2.17c1.06.08 2.15.12 3.23.12 15.41 0 32.04-8.52 43.4-22.25 11.94-14.5 17.99-33.1 16.16-49.77A2.52 2.52 0 00212.1 0z">
+                            </path>
+                        </svg>
+                        <span class="flex flex-col items-start ml-4 leading-none">
+                            <span class="mb-1 text-xs text-gray-600">Download on the</span>
+                            <span class="font-medium title-font">App Store</span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-gray-600 bg-blue-100 dark:bg-gray-800 dark:text-gray-400 body-font">
+        <div class="container flex flex-col items-center px-5 py-8 mx-auto sm:flex-row">
+            <a class="flex items-center justify-center font-medium text-gray-900 dark:text-gray-100 title-font md:justify-start">
+                <img class="w-10 h-10" src="./static/logo.png" />
+                <span class="ml-3 text-xl">DejaView</span>
+            </a>
+            <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
+                <a class="ml-3 text-gray-600 dark:text-gray-400" href="#">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-600 dark:text-gray-400" href="#">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        class="w-5 h-5" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                        </path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-600 dark:text-gray-400" href="#">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                </a>
+                <a class="ml-3 text-gray-600 dark:text-gray-400" href="#">
+                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path stroke="none"
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                        </path>
+                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                    </svg>
+                </a>
+            </span>
+        </div>
+    </footer>
+</body>
+
+</html>
