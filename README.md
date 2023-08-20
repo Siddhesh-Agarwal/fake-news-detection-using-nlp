@@ -1,6 +1,6 @@
 # fake-news-detection-using-nlp
 
-## Setup
+## ⚙️ Setup and Execution
 
 1. Clone the repo:
     ```sh
